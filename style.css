@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+}
+
+.box {
+  margin: 100px;
+  display: grid;
+  grid-template-areas:
+    "card1 card1 card2 card3"
+    "card4 card5 card5 card3";
+  gap: 15px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.headerimg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #996ed9;
+  margin-right: 10px;
+}
+
+header h3,
+header p {
+  margin: auto;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header p {
+  opacity: 50%;
+}
+
+.card__body {
+  opacity: 70%;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: large;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.violetcard {
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 10px right 70px;
+  grid-area: card1;
+}
+
+.greycard {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+  grid-area: card2;
+}
+
+.bigwhitecard {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+  grid-area: card3;
+}
+
+.smallwhitecard {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+  grid-area: card4;
+}
+
+.blackcard {
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+  grid-area: card5;
+}
